@@ -7,23 +7,19 @@ const produtos = [
   ];
 
 //função para adicionar um novo produto à lista
-  function inserirProduto(nome, preco, novoID) {
+  function inserirProduto(nome, preco) {
 
-    for (let i = 0; i < produtos.length; i++){
-      const novoID =produtos[i];
-    }
+      const novoProduto = {
+        id: produtos.length+1,
+        nome: nome,
+        preco: preco
   
-    const novoProduto = {
-      id: novoID + 1,
-      nome: nome,
-      preco: preco
+      };
 
-    };
-    
-    produtos.push(novoProduto);
+      produtos.push(novoProduto);
 
     return novoProduto;
-  }
+    }
 
   const produtoInserido = inserirProduto('Produto 4', 40.0);
   console.log(produtoInserido);  // mostra o novo produto
